@@ -21,5 +21,7 @@ int main() {
         printf("%d was found in the tree\n", number);
     }
 
+    clearTree(&root);
+
     return 0;
 }
