@@ -33,7 +33,15 @@ void insertInTree(Root **root, Root *n) {
 }
 
 Root* find(Root* root, int value) {
-    return NULL;
+    if (root == NULL) {
+        return NULL;
+    } else if (root->value == value) {
+        return root;
+    } else if (value < root->value) {
+        return find(root->left, value);
+    } else {
+        return find(root->right, value);
+    }
 }
 
 void clearTree(Root** root) {
