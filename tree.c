@@ -44,6 +44,17 @@ Root* find(Root* root, int value) {
     }
 }
 
+int depth(Root* root) {
+    int heightLeft, heightRight;
+    if (root == NULL)
+        return 0;
+    heightLeft = depth(root->left);
+    heightRight = depth(root->right);
+    if (heightRight > heightLeft)
+        return heightRight + 1;
+    return heightLeft + 1;
+}
+
 void clearTree(Root** root) {
     if ((*root) != NULL){
         clearTree(&((*root)->left));
