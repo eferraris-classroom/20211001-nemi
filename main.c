@@ -12,5 +12,14 @@ int main() {
         scanf("%d", &number);
         insertInTree(&root, newRoot(number));
     }
+
+    printf("Please, enter a value to look for in the tree: ");
+    scanf("%d", &number);
+    if (find(root, number) == NULL) {
+        printf("%d is not part of the tree\n", number);
+    } else {
+        printf("%d was found in the tree\n", number);
+    }
+
     return 0;
 }
