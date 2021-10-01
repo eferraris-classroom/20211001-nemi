@@ -13,7 +13,7 @@ typedef struct root {
 
 Root* newRoot(int value);
 void insertInTree(Root** root, Root* n);
-
+Root* find(int value);
 void clearTree(Root** root);
 
 #endif //BASE_PROJECT_TREE_H
